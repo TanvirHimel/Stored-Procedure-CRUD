@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PlayerCRUDModelStoreContainer" CdmEntityContainer="PlayerCRUDEntities">
+    <EntitySetMapping Name="Players">
+      <EntityTypeMapping TypeName="PlayerCRUDModel.Player">
+        <MappingFragment StoreEntitySet="Players">
+          <ScalarProperty Name="PlayerId" ColumnName="PlayerId" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="AllPlayerList" FunctionName="PlayerCRUDModel.Store.AllPlayerList" />
+    <FunctionImportMapping FunctionImportName="DeletePlayer" FunctionName="PlayerCRUDModel.Store.DeletePlayer" />
+    <FunctionImportMapping FunctionImportName="GetPlayerById" FunctionName="PlayerCRUDModel.Store.GetPlayerById" />
+    <FunctionImportMapping FunctionImportName="InsertPlayer" FunctionName="PlayerCRUDModel.Store.InsertPlayer" />
+    <FunctionImportMapping FunctionImportName="UpdatePlayer" FunctionName="PlayerCRUDModel.Store.UpdatePlayer" />
+  </EntityContainerMapping>
+</Mapping>
